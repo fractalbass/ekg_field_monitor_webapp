@@ -1,13 +1,7 @@
-# Spring Boot Heroku demo
+EKG Field Monitor Web App
 
-[![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
+This repository contains a web server that runs as part of the EKG Field Monitor system.  The app is intended to run on Heroku, and connects to a database.  More details can be found on the pragmaticiot.wordpress.com website.
 
-This is a small demo application for showing how to run a [Spring Boot](http://projects.spring.io/spring-boot/)
-application on [Heroku](http://heroku.com). For more information see the Dev Center article on 
-[Deploying Spring Boot Applications to Heroku](https://devcenter.heroku.com/articles/deploying-spring-boot-apps-to-heroku).
+Miles Porter
+April 24, 2016
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
-## License
-
-Code is under the [Apache Licence v2](https://www.apache.org/licenses/LICENSE-2.0.txt).
