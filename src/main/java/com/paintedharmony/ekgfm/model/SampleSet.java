@@ -64,7 +64,7 @@ public class SampleSet {
         ArrayList orderedSamples = samples;
         Collections.sort(orderedSamples, new Comparator<Sample>() {
             @Override public int compare(Sample s1, Sample s2) {
-            return s1.getSeq() - s2.getSeq(); // Ascending
+            return s2.getSeq() - s1.getSeq(); // Ascending
             }
         });
         return new SampleSet(orderedSamples);

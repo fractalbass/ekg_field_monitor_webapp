@@ -44,9 +44,17 @@ public class Sample {
     }
 
     public boolean equals(Sample inSample) {
-        return ((inSample.getSeq() == this.getSeq()) &&
+       return ((inSample.getSeq() == this.getSeq()) &&
                 (inSample.getVal() == this.getVal()) &&
                 (inSample.getDeltaT() == this.getDeltaT()));
+    }
+
+    public void print() {
+        System.out.println("----------------------------");
+        System.out.println("Sequence Num . . . " + seq);
+        System.out.println("Value  . . . . . . " + val);
+        System.out.println("DeltaT . . . . . . " + deltaT);
+        System.out.println("----------------------------");
     }
 
 
