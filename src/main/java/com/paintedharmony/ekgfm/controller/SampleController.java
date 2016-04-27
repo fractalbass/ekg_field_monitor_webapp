@@ -19,7 +19,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 import com.paintedharmony.ekgfm.model.Record;
-import com.paintedharmony.ekgfm.dao.RecordRepository;
+import com.paintedharmony.ekgfm.dao.SampleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -29,13 +29,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping("/")
-public class HomeController {
+@RequestMapping("/samples")
+public class SampleController {
 
-    private RecordRepository repository;
+    private SampleRepository repository;
 
     @Autowired
-    public HomeController(RecordRepository repository) {
+    public SampleController(SampleRepository repository) {
         this.repository = repository;
     }
 

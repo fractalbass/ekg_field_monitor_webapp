@@ -48,7 +48,6 @@ public class SampleSet {
 
     private void checkSample(Sample s) {
         if (minSampleValue==0 && maxSampleValue == 0) {
-            System.out.println("=======>  First Sample!");
             minSampleValue = s.getVal();
             maxSampleValue = s.getVal();
         }
@@ -64,7 +63,7 @@ public class SampleSet {
         ArrayList orderedSamples = samples;
         Collections.sort(orderedSamples, new Comparator<Sample>() {
             @Override public int compare(Sample s1, Sample s2) {
-            return s2.getSeq() - s1.getSeq(); // Ascending
+            return s1.getTime() - s2.getTime(); // Ascending
             }
         });
         return new SampleSet(orderedSamples);

@@ -18,30 +18,34 @@ public class SampleSetTest {
 
     @Test
     public void testSampleSet() {
-        Sample s1 = new Sample(3,2,3);
-        Sample s2 = new Sample(2,5,6);
-        Sample s3 = new Sample(1,7,8);
+        Sample s1 = new Sample(20,100);
+        Sample s2 = new Sample(10,200);
+        Sample s3 = new Sample(15,10);
         ArrayList<Sample> sArray = new ArrayList<>();
         sArray.add(s1);
         sArray.add(s2);
         sArray.add(s3);
         SampleSet sSet = new SampleSet(sArray);
         Assert.assertEquals(sSet.getSize(), 3);
-        Assert.assertEquals(sSet.getMaxSampleValue(), 7);
-        Assert.assertEquals(sSet.getMinSampleValue(), 2);
+        Assert.assertEquals(sSet.getMaxSampleValue(), 200);
+        Assert.assertEquals(sSet.getMinSampleValue(), 10);
         SampleSet orderedSamples = sSet.getOrderedSampleSet();
-        Assert.assertTrue(orderedSamples.getSample(0).equals(s1));
-        Assert.assertTrue(orderedSamples.getSample(1).equals(s2));
-        Assert.assertTrue(orderedSamples.getSample(2).equals(s3));
+
+        orderedSamples.samples.forEach((s) -> {
+            s.print();
+        });
+
+        Assert.assertTrue(orderedSamples.getSample(0).equals(s2));
+        Assert.assertTrue(orderedSamples.getSample(1).equals(s3));
+        Assert.assertTrue(orderedSamples.getSample(2).equals(s1));
 
     }
 
     private SampleSet genSampleSet(int samples) {
         SampleSet sSet = new SampleSet();
         for (int i=0;i<samples;i++) {
-            Sample s = new Sample(i,
-                                    (int)(Math.random()*250),
-                    (int) (17+(Math.random()*5)));
+            Sample s = new Sample(i*10,
+                                    (int)(Math.random()*250));
             sSet.samples.add(s);
         }
         return sSet;

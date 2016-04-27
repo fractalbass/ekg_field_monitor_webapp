@@ -13,7 +13,38 @@ public class Strip {
 
     private Date uploaded;
 
-    private ArrayList<SampleSet> readings;
+    public ArrayList<SampleSet> getSampleSet() {
+        return sampleSets;
+    }
+
+    public void setSampleSets(ArrayList<SampleSet> sampleSets) {
+        this.sampleSets = sampleSets;
+    }
+
+    public void addSampleSet(SampleSet sampleSet) {
+        if (sampleSets==null) {
+            sampleSets = new ArrayList<>();
+        }
+        this.sampleSets.add(sampleSet);
+    }
+
+    public UUID getID() {
+        return ID;
+    }
+
+    public void setID(UUID ID) {
+        this.ID = ID;
+    }
+
+    public Date getUploaded() {
+        return uploaded;
+    }
+
+    public void setUploaded(Date uploaded) {
+        this.uploaded = uploaded;
+    }
+
+    private ArrayList<SampleSet> sampleSets;
 
 
 }

@@ -5,15 +5,6 @@ package com.paintedharmony.ekgfm.model;
  */
 public class Sample {
 
-    private int seq;
-
-    public int getSeq() {
-        return seq;
-    }
-
-    public void setSeq(int seq) {
-        this.seq = seq;
-    }
 
     public int getVal() {
         return val;
@@ -23,37 +14,34 @@ public class Sample {
         this.val = val;
     }
 
-    public int getDeltaT() {
-        return deltaT;
+    public int getTime() {
+        return time;
     }
 
-    public void setDeltaT(int deltaT) {
-        this.deltaT = deltaT;
+    public void setTime(int time) {
+        this.time = time;
     }
 
     private int val;
 
-    private int deltaT;
+    private int time;
 
     public Sample(){};
 
-    public Sample(int seq, int val, int deltaT) {
-        this.seq = seq;
+    public Sample(int time, int val) {
         this.val = val;
-        this.deltaT = deltaT;
+        this.time = time;
     }
 
     public boolean equals(Sample inSample) {
-       return ((inSample.getSeq() == this.getSeq()) &&
-                (inSample.getVal() == this.getVal()) &&
-                (inSample.getDeltaT() == this.getDeltaT()));
+       return ((inSample.getTime() == this.getTime()) &&
+                (inSample.getVal() == this.getVal()));
     }
 
     public void print() {
         System.out.println("----------------------------");
-        System.out.println("Sequence Num . . . " + seq);
-        System.out.println("Value  . . . . . . " + val);
-        System.out.println("DeltaT . . . . . . " + deltaT);
+        System.out.println("Time  . . . " + time);
+        System.out.println("Value . . . " + val);
         System.out.println("----------------------------");
     }
 

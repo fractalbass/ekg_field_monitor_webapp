@@ -17,11 +17,9 @@ public class SampleTest {
 
     @Test
     public void testCreateSample() {
-        Sample sample = new Sample(1,150,20);
-        Assert.assertEquals(sample.getSeq(), 1);
+        Sample sample = new Sample(20,150);
+        Assert.assertEquals(sample.getTime(), 20);
         Assert.assertEquals(sample.getVal(), 150);
-        Assert.assertEquals(sample.getDeltaT(), 20);
-
     }
 
 
