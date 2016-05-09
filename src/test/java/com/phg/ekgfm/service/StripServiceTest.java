@@ -1,10 +1,10 @@
-package com.paintedharmony.ekgfm.service;
+package com.phg.ekgfm.service;
 
-import com.paintedharmony.ekgfm.dao.StripDao;
-import com.paintedharmony.ekgfm.model.Monitor;
-import com.paintedharmony.ekgfm.model.Sample;
-import com.paintedharmony.ekgfm.model.SampleSet;
-import com.paintedharmony.ekgfm.model.Strip;
+import com.phg.ekgfm.dao.StripDao;
+import com.phg.ekgfm.model.Monitor;
+import com.phg.ekgfm.model.Sample;
+import com.phg.ekgfm.model.SampleSet;
+import com.phg.ekgfm.model.Strip;
 import org.junit.Before;
 import org.junit.Test;
 import static org.mockito.Mockito.*;
@@ -15,9 +15,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-/**
- * Created by milesporter on 4/27/16.
- */
+
+
 public class StripServiceTest {
 
     private StripDao stripDao;
@@ -46,7 +45,9 @@ public class StripServiceTest {
             for (int sampleSetCnt = 0; sampleSetCnt < 5; sampleSetCnt++) {
                 SampleSet sSet = new SampleSet();
                 for (int sampleCnt = 0; sampleCnt < 100; sampleCnt++) {
-                    sSet.add(new Sample(sampleCnt*20, (sampleCnt*5) % 250));
+                    Sample sample = new Sample(sampleCnt*20, (sampleCnt*5) % 250);
+                    sSet.add(sample);
+
                 }
                 s.addSampleSet(sSet);
             }

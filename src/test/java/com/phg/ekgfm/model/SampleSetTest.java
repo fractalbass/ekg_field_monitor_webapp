@@ -1,4 +1,4 @@
-package com.paintedharmony.ekgfm.model;
+package com.phg.ekgfm.model;
 
 import org.junit.Assert;
 import org.junit.Test;

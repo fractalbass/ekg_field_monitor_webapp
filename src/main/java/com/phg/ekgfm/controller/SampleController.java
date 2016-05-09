@@ -13,16 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.paintedharmony.ekgfm;
+package com.phg.ekgfm.controller;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
-@SpringBootApplication
-public class EKGFMApplication {
+@Controller
+@RequestMapping("/samples")
+public class SampleController {
 
-    public static void main(String[] args) {
-        SpringApplication.run(EKGFMApplication.class, args);
+
+    @RequestMapping(method = RequestMethod.GET)
+    public String home() {
+        return "home";
     }
-
 }

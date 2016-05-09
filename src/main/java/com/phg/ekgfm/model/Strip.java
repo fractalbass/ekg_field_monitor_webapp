@@ -1,4 +1,6 @@
-package com.paintedharmony.ekgfm.model;
+package com.phg.ekgfm.model;
+
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -7,7 +9,19 @@ import java.util.UUID;
 /**
  * Created by milesporter on 4/24/16.
  */
+@Component
 public class Strip {
+
+    public void Strip() {
+        ID = UUID.randomUUID();
+    }
+
+    public static Strip generate() {
+        Strip s = new Strip();
+        UUID id = UUID.randomUUID();
+        s.setID(id);
+        return s;
+    }
 
     private UUID ID;
 

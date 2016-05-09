@@ -1,8 +1,11 @@
-package com.paintedharmony.ekgfm.model;
+package com.phg.ekgfm.model;
+
+import org.springframework.stereotype.Component;
 
 /**
  * Created by milesporter on 4/25/16.
  */
+@Component
 public class Sample {
 
 
@@ -45,5 +48,8 @@ public class Sample {
         System.out.println("----------------------------");
     }
 
+    public String toString() {
+        return     String.valueOf(time + ", " + val);
+    }
 
 }

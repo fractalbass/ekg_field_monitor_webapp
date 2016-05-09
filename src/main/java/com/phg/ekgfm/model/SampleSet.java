@@ -1,4 +1,6 @@
-package com.paintedharmony.ekgfm.model;
+package com.phg.ekgfm.model;
+
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -7,6 +9,7 @@ import java.util.Comparator;
 /**
  * Created by milesporter on 4/24/16.
  */
+@Component
 public class SampleSet {
 
     ArrayList<Sample> samples;

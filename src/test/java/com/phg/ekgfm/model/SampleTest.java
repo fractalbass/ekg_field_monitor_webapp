@@ -1,8 +1,8 @@
-package com.paintedharmony.ekgfm.model;
+package com.phg.ekgfm.model;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.springframework.test.context.TestPropertySource;
+
 /**
  * Created by milesporter on 4/25/16.
  * A set of tests to validate how samples will work.
